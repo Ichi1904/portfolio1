@@ -1,0 +1,327 @@
+@charset "utf-8";
+/* ヘッダー　*/
+body{
+  background-color: #F6F6F6;
+}
+header {
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #F6F6F6;
+}
+.flex-box{
+  display: flex;
+}
+#logo {
+  float: left;
+}
+#global-nav {
+  margin-left: auto;
+}
+header nav ul {
+  overflow: hidden;
+}
+header li {
+  float: left;
+  margin-right: 25px;
+}
+#global-nav li:nth-child(-n+7) a {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  padding: 50px 0;
+  font-weight: bold;
+  color: #373333;
+  transition: all ease 0.5s;
+}
+#global-nav li:nth-child(-n+7) a:hover {
+  color: #FC8A15;
+}
+#global-nav li:last-child a {
+  display: block;
+  transition: ease all 0.3s;
+  line-height: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  width: 170px;
+  padding: 25px 0;
+  margin-top: 40px;
+  color: #fff;
+  background-color: #862c62;
+  position: relative;
+}
+#global-nav li:last-child a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  margin: auto;
+  transition: ease-out all 0.2s;
+  background-color: #fff;
+}
+#global-nav li:last-child a:hover::before{
+    width: 165px;
+    height: 45px;
+}
+#global-nav li:last-child a span{
+    color: #fff;
+    transition: ease all 0.2s;
+    display: block;
+    position: absolute;
+    top: 18px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+#global-nav li:last-child a:hover span{
+    color: #862c62;
+}
+/* メインビジュアル　*/
+main {
+  clear: both;
+}
+
+
+  /* お問い合わせ　*/
+  #contactMainVisual {
+    background-image: url("../../images/main_contant.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    box-sizing: border-box;
+    height: 200px;
+    clear: both;
+    padding-top: 75px;
+  }
+
+
+  /* お問い合わせ上部 */
+  .contactTop {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    text-align: center;
+  }
+  .contactTitle {
+    color: #2C8650;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+
+
+  /* お問い合わせ下部 */
+  .contactBottom {
+    margin-top: 80px;
+  }
+
+
+  /* フォーム設定 */
+  form {
+    width: 960px;
+    margin: 0 auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  .question {
+    text-decoration: underline;
+    color: blue;
+  }
+  .cnt_head {
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    vertical-align: top;
+    font-weight: normal;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  .cnt_data {
+    padding: 15px 22px;
+    line-height: 1.7;
+    font-size: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  .r-label1 {
+    display: inline-block;
+    font-size: 15px;
+  }
+  .r-label1, .form_textbox {
+    display: inline-block;
+  }
+  .form_textbox input {
+    min-width: 250px;
+    padding: 5px;
+  }
+  .form_require {
+    display: inline-block;
+    padding: 0 9px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #fff;
+    background-color: #ff0332;
+    vertical-align: middle;
+  }
+  textarea {
+    min-width: 100%;
+    width: 300px;
+    height: 200px;
+  }
+
+
+  /* フォームボタン設定 */
+  .form_btn {
+    position: relative;
+    display: block;
+    padding: 12px;
+    border: 2px solid #2c8650;
+    width: 250px;
+    text-align: center;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #2c8650;
+    margin-top: 20px;
+    transition: 0.3s;
+  }
+  .form_btn:hover {
+    color: #2c8650;
+    background-color: #fff;
+    opacity: 0.9;
+  }
+  .form_btn::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    background: #fff;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform .3s;
+  }
+  .form_btn:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+
+
+  /* フッター　*/
+  footer {
+    width: 100%;
+    margin-top: 40px;
+    background-color: #2c8650;
+  }
+  .footer-contents {
+    height: 230px;
+  }
+  .footer-left {
+    width: 450px;
+    height: 230px;
+    float: left;
+    margin-left: 70px;
+  }
+  #footerLogo {
+    width: 300px;
+    height: 100px;
+    padding: 50px 0;
+  }
+  #footerLogo img{
+    width: 100%;
+    height: auto;
+  }
+  .footer-right {
+    width: 530px;
+    float: right;
+    margin-top: 50px;
+    margin-right: 50px;
+  }
+  .footer-nav li {
+    float: left;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  .footer-nav li a {
+    display: block;
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .footer-nav li:nth-child(3) a {
+    margin-left: 15px;
+  }
+  .footer-nav li:nth-child(4) a {
+    margin-bottom: 5px;
+  }
+  .footer-nav li:nth-child(5) a {
+    margin-left: 15px;
+    margin-bottom: 5px;
+  }
+  .footer-nav li:nth-child(6) a {
+    margin-bottom: 5px;
+  }
+  .footer-subcontents {
+    padding: 8px;
+    background-color: #006331;
+    color: #fff;
+    text-align: center;
+  }
+  /* ボタン　*/
+  .footer-btn {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .a_btn {
+    position: relative;
+    display: inline-block;
+    padding: .5em 4em;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+  }
+  .a_btn:hover {
+    color: #006331;
+    opacity: 0.9;
+  }
+  .a_btn::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    background: #fff;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform .3s;
+  }
+  .a_btn:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+  .otoiawase-btn {
+    margin-left: 20px;
+  }
