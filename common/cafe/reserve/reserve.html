@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ご予約</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../common/css/style_pc.css">
+    <link rel="stylesheet" href="../common/css/style_sp.css">
+</head>
+<body>
+    <!--　ヘッダー　-->
+<header>
+    <div id="logo"><a href="../index.html"><img src="../common/images/logo.png" alt="あいうえお" width="220" height="80"></a></div>
+    <div class="flex_box">
+        <div class="nav-toggle sp" onclick="toggleMenu()">
+            <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+        </div>
+    <div id="global-nav" class="global-nav">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Access</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="reserve-btn">
+        <div class="reserve-content">
+        <a href="reserve.html">
+            <div class="reserve-img pc"><img src="../common/images/reserve.png" alt="予約ボタン画像" class="pc"></div>
+            <p>Reserve</p>
+        </a>
+        </div>
+</div>
+    </div>
+</header>
+<main>
+    <h1 id="reserveMain">RESERVATION</h1>
+    <section id="reserve">
+        <h2 class="ttl">ご予約フォーム</h2>
+        <div class="sub">ご予約は3日前までにお願い致します。<br>
+            直前のご予約は電話で承っております。090-XXX-XXXよりご連絡ください。<br>
+        </div>
+        <div class="reserve-wrapper">            
+        <form action="" method="post">
+            <h3>は必須項目です。</h3>
+            <dl>
+                <div class="test">
+                <dt class="dt-option">お名前</dt>
+                <dd><input type="text" name="name" placeholder="(例)山田太郎"></dd>
+            </div>
+                <dt class="dt-option">フリガナ</dt>
+                <dd><input type="text" name="name" placeholder="(例)ヤマダタロウ"></dd>
+                <dt class="dt-option">メールアドレス</dt>
+                <dd><input type="email" name="mail" placeholder="sample@example.com"></dd>
+                <dt class="dt-option">ご予約人数</dt>
+                <dd>
+                    <select name="reserve-peaple">
+                        <option value="">人数を選択</option>
+                        <option value="1人">1人</option>
+                        <option value="2人">2人</option>
+                        <option value="3人">3人</option>
+                        <option value="4人">4人</option>
+                    </select>
+                </dd>
+                <dt class="dt-option">ご希望日</dt>
+                <dd>
+                    <select name="reserve-yaer">
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                    </select>
+                    <span>年</span>
+                    <select name="reserve-month">
+                        <option value="1月">1</option>
+                        <option value="2月">2</option>
+                        <option value="3月">3</option>
+                        <option value="4月">4</option>
+                        <option value="5月">5</option>
+                        <option value="6月">6</option>
+                        <option value="7月">7</option>
+                        <option value="8月">8</option>
+                        <option value="9月">9</option>
+                        <option value="10月">10</option>
+                        <option value="11月">11</option>
+                        <option value="12月">12</option>
+                    </select>
+                    <span>月</span>
+                    <select name="reserve-day">
+                        <option value="1日">1</option>
+                        <option value="2日">2</option>
+                        <option value="3日">3</option>
+                        <option value="4日">4</option>
+                        <option value="5日">5</option>
+                        <option value="6日">6</option>
+                        <option value="7日">7</option>
+                        <option value="8日">8</option>
+                        <option value="9日">9</option>
+                        <option value="10日">10</option>
+                        <option value="11日">11</option>
+                        <option value="12日">12</option>
+                        <option value="13日">13</option>
+                        <option value="14日">14</option>
+                        <option value="15日">15</option>
+                        <option value="16日">16</option>
+                        <option value="17日">17</option>
+                        <option value="18日">18</option>
+                        <option value="19日">19</option>
+                        <option value="20日">20</option>
+                        <option value="21日">21</option>
+                        <option value="22日">22</option>
+                        <option value="23日">23</option>
+                        <option value="24日">24</option>
+                        <option value="25日">25</option>
+                        <option value="26日">26</option>
+                        <option value="27日">27</option>
+                        <option value="28日">28</option>
+                        <option value="29日">29</option>
+                        <option value="30日">30</option>
+                        <option value="31日">31</option>
+                    </select>
+                    <span>日</span>
+                </dd>
+                <dt>その他<br><span class="content-opt">その他のご希望やアレルギーの有無などありましたら、お書き添えください。</span></dt>
+                        <dd class="textarea">
+                            <textarea name="content"  cols="40" rows="10"></textarea>
+                        </dd>
+            </dl>
+            <p class="submit-opt">
+            <input type="submit" value="送信する" class="submit-btn">
+            </p>
+        </form>
+    </div>
+    </section>
+</main>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="../../cafe/common/js/reserve.js"></script>
+</body>
+</html>

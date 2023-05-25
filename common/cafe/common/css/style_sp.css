@@ -1,0 +1,506 @@
+ /* スマホCSS */
+ @media screen and (max-width:736.9px) {
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: 'Shippori Mincho', serif;
+        font-size: 18px;
+    }
+    img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style-type: none;
+    }
+    .pc{
+        display: none;
+    }
+    section h2{
+      width: 85%;
+      margin: 20px auto;
+    }
+    h2{
+        text-align: center;
+        line-height: 200%;
+        font-size: 1.7rem;
+        color: #fff;
+        font-weight: bold;
+      }
+      .h2_style{
+        display: block;
+        line-height: 100%;
+        font-size: 1rem;
+        color: #fff;
+      }
+      h3{
+        font-size: 24px;
+        letter-spacing: 5px;
+        color: #a85f21;
+      }
+      html{
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+    /* ヘッダー */
+    header{
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        z-index: 10;
+        background-color:rgba(255, 248, 234, 0.5);
+    }
+    #logo{
+        width: 45%;
+        margin: 20px;
+        float: left;
+    }
+    #logo img{
+      width: 100%;
+    }
+    .reserve-btn{
+        position: absolute;
+        top: 0;
+        right: 85px;
+    }
+    .reserve-content a{
+        display: block;
+        width: 70px;
+        padding: 24px 0;
+        background:#594545;
+        color: #fff;
+        text-align: center;
+        font-size: 15px;
+    }
+    /* ハンバーガーメニュー */
+    .nav-toggle{
+        width: 45px;
+        height: 45px;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        z-index: 1000;
+    }
+    .nav-toggle>div{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .nav-toggle span{
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        transition: all 0.6s ease;
+    }
+    .nav-toggle span:nth-child(1){
+        top: 5px;
+    }
+    .nav-toggle span:nth-child(2){
+        top: 20px;
+    }
+    .nav-toggle span:nth-child(3){
+        top: 35px;
+    }
+    .open .nav-toggle span:nth-child(1){
+        transform: rotate(45deg);
+        top: 15px;
+    }
+    .open .nav-toggle span:nth-child(2){
+        opacity: 0;
+    }
+    .open .nav-toggle span:nth-child(3){
+        transform: rotate(-45deg);
+        top: 15px;
+    }
+
+    /* グローバルメニュー */
+    #global-nav{
+        background-color: rgba(51, 26, 5, 0.9);
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 990;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+        font-size: 29px;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+    }
+    #global-nav ul{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    #global-nav a{
+        display: block;
+        padding: 10px 0;
+        color: #fff;
+    }
+    .open{
+        overflow: hidden;
+    }
+    .open #global-nav{
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.6s ease;
+    }
+    .open #global-nav ul{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* メインビジュアル*/
+    .mainVisual{
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        height: 600px;
+        position: relative;
+    }
+    .mainVisualTitle{
+        display: block;
+        color: #fff;
+        text-align: left;
+        font-size: 3rem;
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        line-height: 100%;
+    }
+    .mainVisualTitle span{
+        font-size: 1rem;
+    }
+    /* 予約メイン */
+    #reserveMain{
+      background-image: url("../../common/images/reserve1.jpg");
+      background-repeat: no-repeat;
+      background-position: 25% 50%;
+      background-size: cover;
+      height: 300px;
+      color: #fff;
+      text-align: center;
+      font-size: 2.3rem;
+      font-weight: bold;
+      padding: 140px 30px 0;
+    }
+    /* 予約 */
+    #reserve{
+      background-color: #FFFBE9;
+      padding: 35px 0;
+    }
+    .ttl{
+      color: #594545;
+      font-size: 1.8rem;
+    }
+    .sub{
+      width: 85%;
+      font-size: 0.9rem;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+    .reserve-wrapper{
+      width: 90%;
+      margin: 0 auto;
+      padding: 35px 0;
+      background-color: #fff;
+    }
+    .reserve-wrapper h3{
+      font-size: 18px;
+      text-align: right;
+      color: #594545;
+      padding: 20px 15px;
+    }
+    .reserve-wrapper h3::before{
+      content: "*";
+      color: red;
+    }
+    .reserve-wrapper form dl{
+      display: flex;
+      flex-flow: column;
+      width: 85%;
+      margin: 0 auto;
+    }
+    .reserve-wrapper form dt{
+      color: #594545;
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 10px 0;
+    }
+    .reserve-wrapper form .dt-option::after{
+      content: "*";
+      color: red;
+      padding: 0 3px;
+    }
+    form input{
+      border: transparent 2px solid;
+    }
+    .reserve-wrapper form dd input[type="text"]{
+      background-color: #FFFBE9;
+      width: 100%;
+      height: 45px;
+      padding: 0 10px;
+    }
+    .reserve-wrapper form dd input[type="text"]:focus{
+      outline: #594545 2px solid;
+    }
+    .reserve-wrapper form dd input[type="email"]{
+      background-color: #FFFBE9;
+      width: 100%;
+      height: 45px;
+      padding: 0 10px;
+    }
+    .reserve-wrapper form dd input[type="email"]:focus{
+      outline: #594545 2px solid;
+    }
+    select,option{
+      height: 45px;
+      padding: 0 20px;
+      background-color: #fffbe9;
+      border: transparent 2px solid;
+    }
+    .content-opt{
+      font-size: 0.9rem;
+    }
+    .textarea textarea{
+      background-color: #fffbe9;
+      resize: none;
+      width: 100%;
+      padding: 8px;
+      border: transparent 1px solid;
+    }
+    textarea:focus{
+      outline: #594545 2px solid;
+    }
+    .submit-opt{
+      text-align: center;
+    }
+    .submit-opt input[type="submit"]{
+      background-color: #594545;
+      color: #fff;
+      width: 200px;
+      margin-top: 35px;
+      padding: 15px 20px;
+    }
+    /* コンセプト */
+    #concept{
+      background-color: #deb9a0;
+      color: #fff;
+      width: 100%;
+        padding: 40px 0;
+      }
+      .concept-content{
+        width: 90%;
+        margin: 0 auto;
+      }
+      .concept-content span{
+        display: block;
+        height: 10px;
+      }
+      .concept-content p{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .next-page{
+        float: right;
+      }
+      .next{
+        display: block;
+        width: 300px;
+        height: 44px;
+        color: #fff;
+        text-align:center;
+        position: relative;
+        font-size: 25px;
+      }
+      .next::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: calc(50% - 5px);
+        width: 30px;
+        right: 70px;
+        height: 5px;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transform: skew(45deg);
+      }
+
+      /* スライドショー */
+      .slick-slide{
+        margin-right: 1vw!important;
+        margin-left: 1vw!important;
+      }
+      .slider{
+        width: 85%;
+        margin: 0 auto;
+      }
+      .slider li{
+        list-style-type: none;
+      }
+      .slider img{
+        width: 100%;
+        height: 200px;
+      }
+
+      /* メニュー */
+      #menu{
+        width: 100%;
+        background: #E3CAA5;
+        padding: 40px 0;
+      }
+      .menu-content{
+        background: #FFFBE9;
+        width: 85%;
+        padding: 10px;
+        margin: 0 auto;
+      }
+      .menu-box{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 80px 0;
+      }
+      .menu-text{
+        text-align: center;
+        line-height: 200%;
+      }
+      .menu-text h3{
+        text-align: center;
+        font-size: 4.5vw;
+      }
+      .menu-text ul{
+        width: 90%;
+        margin: 0 auto;
+      }
+      .menu-text ul li{
+        font-size: 3.5vw;
+      }
+      .menu_style{
+        margin-left: 10%;
+      }
+      .img{
+        padding: 0 20px;
+      }
+      .img img{
+        width: 100%;
+      }
+      .btn{
+        display: inline-block;
+        padding: 25px;
+        border: 1px solid #000;
+        transition: ease all 0.5s;
+        line-height: 100%;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18px;
+        width: 90%;
+        color: #fff;
+        background-color: #594545;
+      }
+
+      /* ギャラリー */
+      #gallery{
+        background-color: #deb9a0;
+        max-width: 100%;
+        padding: 40px 0;
+      }
+      .gallery-content{
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 40px;
+      }
+      .gallery-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 10px;
+      }
+      .item{
+        width: 50%;
+        padding: 10px;
+      }
+      .item img{
+        width: 100%;
+      }
+
+      /* アクセス */
+      #access{
+        width: 100%;
+        background: #E3CAA5;
+        padding: 40px 0;
+      }
+      .access-map{
+        width: 85%;
+        margin: 0 auto;
+      }
+      iframe{
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
+      .access-detail{
+        width: 75%;
+        margin: 20px auto;
+      }
+      .access-detail p{
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .access-txt div{
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+      }
+      .access-txt div dt{
+        min-width: 9em;
+      }
+      .access-txt div dd{
+        font-size: vw;
+      }
+
+      /* フッター */
+      footer{
+        width: 100%;
+        background-color: #594545;
+        color: #fff;
+        padding: 30px 0;
+      }
+      .footer-content{
+        text-align: center;
+      }
+      .footer-left{
+        margin-bottom: 10px;
+      }
+      .footer-right p{
+        margin-bottom: 10px;
+      }
+      .sns{
+        display: flex;
+        justify-content: center;
+      }
+      .sns-wrapper{
+        align-items: center;
+        display: flex;
+        text-align: center;
+      }
+      .fa-brands{
+        font-size: 55px;
+        color: #fff;
+        padding: 0 15px;
+      }
+}

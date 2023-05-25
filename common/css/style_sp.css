@@ -1,0 +1,446 @@
+@charset "utf-8";
+/* sp */
+@media screen and (max-width:736.667px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: 'Century Gothic pro', 'Arial Narrow', Arial, sans-serif;
+    }
+    img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    a{
+        text-decoration: none;
+        color: #333;
+    }
+    li{
+        list-style-type: none;
+    }
+    .pc{
+        display: none;
+    }
+    header{
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        background-color: #B0DAFF;
+        display: flex;
+        align-items: center;
+        z-index: 100;
+    }
+    #logo{
+        width: 25%;
+        margin: 15px;
+    }
+    #logo img{
+        z-index: 100;
+    }
+    main{
+        padding-top: 50px;
+    }
+    html{
+        scrollbar-width: none;
+    }
+    /* ハンバーガーメニュー */
+    .openbtn{
+        position: relative;
+        width: 45px;
+        height: 45px;
+        right: 5px;
+        z-index: 100;
+        margin-left: auto;
+    }
+    .openbtn span{
+        display: inline-block;
+        transition: all .6s ease;
+        position: absolute;
+        left: 10px;
+        height: 3px;
+        background-color: #fff;
+    }
+    .openbtn span:nth-child(1){
+        top: 15px;
+        width: 40%;
+    }
+    .openbtn span:nth-child(2){
+        top:25px;
+        width: 40%;
+    }
+    .open .openbtn span:nth-child(1){
+        transform: translateY(5px)rotate(-45deg);
+    }
+    .open .openbtn span:nth-child(2){
+        transform: translateY(-5px)rotate(45deg);
+    }
+    /* gnav */
+    #global-nav{
+        background-color: rgba(176, 218, 255, 0.9);
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        z-index: 99;
+        font-size: 1.8rem;
+        visibility: hidden;
+        opacity: 0;
+    }
+    #global-nav ul{
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    #global-nav a{
+        display: flex;
+        padding: 20px 0;
+        color: #fff;
+    }
+    #global-nav li:last-child a{
+        color: #FEFF86;
+    }
+    .open{
+        overflow: hidden;
+    }
+    .open #global-nav{
+        visibility: visible;
+        opacity: 1;
+        transition: all .6s ease;
+    }
+    .open #global-nav ul{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    /* メインビジュアル */
+    .mainVisual{
+        position: relative;
+    }
+    .mainVisualTitle{
+        display: block;
+        color: #fff;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 3rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        z-index: 10;
+    }
+    /* skippr */
+    .slider{
+        width: 100%;
+        height: 280px;
+    }
+    .skippr-slider{
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+    }
+    .skippr-nav-element-block{
+        display: none;
+    }
+    /* 見出し設定 */
+    section{
+        margin: auto;
+    }
+    section h2{
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 200%;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+    }
+    h2::after{
+        content: "";
+        display: block;
+        width: 50px;
+        height: 5px;
+        margin: auto;
+    }
+    /* works */
+    #works{
+        width: 100%;
+        padding: 40px 0;
+        background-color: #DAF5FF;
+    }
+    #works h2{
+        color: #7ECEEC;
+    }
+    #works h2::after{
+        background-color: #7ECEEC;
+    }
+    .works-content{
+        width: 100%;
+    }
+    .works-box {
+        display: block;
+        width: 90%;
+        margin: 0 auto 35px;
+    }
+    .works-box h3{
+        color: #7ECEEC;
+    }
+    /* box1の設定 */
+    .box1{
+        margin: 0 auto 20px;
+    }
+    /* box2の設定 */
+    .box2 h3{
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    .works-txt{
+        width: 85%;
+        margin: 0 auto 20px;
+        text-align: center;
+        font-size: 3.5vw;
+    }
+    .works-txt div{
+        display: flex;
+        justify-content: flex-start;
+        padding: 20px;
+        align-items: center;
+    }
+    .works-txt div:nth-child(-n+5){
+        border-bottom: 1px solid #aaa;
+    }
+    .works-txt div:last-child li{
+        list-style-type: disc;
+    }
+    .works-txt div:last-child li:nth-child(1){
+        margin-bottom: 10px;
+    }
+    .works-txt div dt{
+        min-width: 9em;
+    }
+    .works-txt div dd{
+        text-align: left;
+        letter-spacing: 1px;
+    }
+    .works-txt div dd span{
+        font-weight: bold;
+    }
+    .box2 a{
+        background: #FEFF86;
+        border-radius: 3px;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 220px;
+        padding: 10px 25px;
+        margin: 0 auto;
+        color: #313131;
+        transition: 0.3s ease-in-out;
+        font-weight: 500;
+    }
+    .box2 a:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        right: 2rem;
+        font-size: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s;
+        width: 6px;
+        height: 6px;
+        border-top: solid 2px currentColor;
+        border-right: solid 2px currentColor;
+        transform: translateY(-50%) rotate(45deg);
+      }
+    /* banner */
+    #gallery{
+        width: 100%;
+        padding: 35px 0;
+        background-color: #B0DAFF;
+    }
+    #gallery h2{
+        color: #fff;
+    }
+    #gallery h2::after{
+        background-color: #fff;
+    }
+    #gallery ul{
+        display: block;
+        justify-content: space-between;
+        width: 60%;
+        margin: 20px auto;
+    }
+    #gallery ul li:nth-child(2){
+        margin: 40px 0;
+    }
+    #gallery ul li img{
+        width: 100%;
+        height: auto;
+    }
+    /* skill */
+    #skill{
+        width: 100%;
+        padding: 35px 0;
+        background-color: #DAF5FF;
+    }
+    #skill h2{
+        color: #7ECEEC;
+    }
+    #skill h2::after{
+        background-color: #7ECEEC;
+    }
+    .card-box{
+        margin: 0 auto;
+    }
+    .card-container{
+        width: 100%;
+    }
+    .card-wrapper{
+        width: calc(100% / 1 - 30px);
+        text-align: center;
+        margin: 0 auto;
+    }
+    .card-item{
+        width: 60%;
+        height:350px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        background-color: #fff;
+        position: relative;
+    }
+    .card-item h3{
+        text-align: center;
+    }
+    .card-img{
+        max-width: 35%;
+        margin: 0 auto;
+        padding: 30px;
+    }
+    .card-txt{
+        text-align: left;
+        padding: 20px;
+    }
+    .card-item span{
+        display: block;
+        text-align: center;
+        position: absolute;
+        top: 90%;
+        left: 33%;
+    }
+    /* about */
+    #about{
+        width: 100%;
+        padding: 35px 0;
+        background-color: #B0DAFF;
+    }
+    #about h2{
+        color: #fff;
+    }
+    #about h2::after{
+        background-color: #fff;
+    }
+    .about-wrapper{
+        width: 85%;
+        margin: 0 auto;
+    }
+    .card-text{
+        background-color: #DAF5FF;
+        text-align: center;
+    }
+    .aboutTitle{
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: 1.8rem;
+        padding-top: 10px;
+    }
+    .aboutTitle span{
+        display: block;
+        font-size: 0.9rem;
+    }
+    .aboutTxt{
+        padding: 20px;
+        letter-spacing: 3px;
+    }
+    .aboutTxt li{
+        padding: 5px;
+    }
+    .aboutTxt span{
+        display: block;
+        font-weight: bold;
+    }
+    /* contact */
+    #contact{
+        width: 100%;
+        background-image: url("../../images/contactimage.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 350px;
+        position: relative;
+    }
+    #contact h2{
+        color: #fff;
+    }
+    #contact h2::after{
+        background-color: #fff;
+    }
+    .contact-wrapper{
+        width: 65%;
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        background: rgba(255, 255, 255, 0.5);
+        padding: 20px 25px;
+    }
+    .contact-txt{
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    .contactLink{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .contactLink span{
+        display: block;
+        background-color: #6bb6ff;
+        color: #fff;
+        padding: 20px 10px;
+        margin-top: 20px;
+    }
+    .contactLink span::before{
+        font-family: "Font Awesome 5 Free";
+        content: "\f0e0";
+        margin-right: 10px;
+        font-weight: 900;
+        font-size: 20px;
+    }
+    /* footer */
+    footer{
+        width: 100%;
+        height: 50px;
+        background-color: #B0DAFF;
+    }
+    #page-top{
+        display: block;
+        text-align: center;
+        background-color: #FEFF86;
+        font-weight: bold;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    #page-top a{
+        color: #333;
+    }
+}
